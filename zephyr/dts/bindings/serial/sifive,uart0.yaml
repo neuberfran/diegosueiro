@@ -1,0 +1,26 @@
+#
+# Copyright (c) 2018, SiFive Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: SIFIVE UART
+version: 0.1
+
+description: >
+    This binding gives a base representation of the SIFIVE UART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "sifive,uart0"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+...

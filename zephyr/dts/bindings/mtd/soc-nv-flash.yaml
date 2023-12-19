@@ -1,0 +1,32 @@
+---
+title: Flash base node description
+version: 0.1
+
+description: >
+    This binding gives a base FLASH description
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "soc-nv-flash"
+
+    label:
+      category: optional
+
+    erase-block-size:
+     type: int
+     description: address alignment required by flash erase operations
+     generation: define
+     category: optional
+     label: alignment
+
+    write-block-size:
+     type: int
+     description: address alignment required by flash write operations
+     generation: define
+     category: optional
+     label: alignment
+
+...

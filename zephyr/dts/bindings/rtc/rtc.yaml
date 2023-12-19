@@ -1,0 +1,32 @@
+#
+# Copyright (c) 2018, blik GmbH
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: RTC Base Structure
+version: 0.1
+
+description: >
+    This binding gives the base structures for all RTC devices
+
+inherits:
+    !include base.yaml
+
+properties:
+    clock-frequency:
+      type: int
+      category: optional
+      description: Clock frequency information for RTC operation
+      generation: define
+    label:
+      category: required
+    interrupts:
+      category: required
+
+    prescaler:
+      type: int
+      category: required
+      description: RTC frequency equals clock-frequency divided by the prescaler value
+      generation: define
+...

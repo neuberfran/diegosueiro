@@ -1,0 +1,17 @@
+---
+title: ARM CMSDK WATCHDOG
+version: 0.1
+
+description: >
+    This binding gives a base representation of the ARM CMSDK WATCHDOG
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "arm,cmsdk-watchdog"
+
+    reg:
+      category: required
+...

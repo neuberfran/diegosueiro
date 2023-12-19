@@ -1,0 +1,28 @@
+---
+title: STM32 PWM
+version: 0.1
+
+description: >
+    This binding gives a base representation of the STM32 PWM
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "st,stm32-pwm"
+
+    label:
+      category: required
+
+    st,prescaler:
+      type: int
+      category: required
+      description: Clock prescaler at the input of the timer
+      generation: define
+
+"#cells":
+  - channel
+# period in terms of nanoseconds
+  - period
+...

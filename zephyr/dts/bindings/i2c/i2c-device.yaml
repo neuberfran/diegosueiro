@@ -1,0 +1,24 @@
+#
+# Copyright (c) 2017, Linaro Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: I2C Device Base Structure
+version: 0.1
+
+description: >
+    This binding gives the base structures for all i2c devices
+
+inherits:
+    !include base.yaml
+
+parent:
+    bus: i2c
+
+properties:
+    reg:
+      category: required
+    label:
+      category: required
+...

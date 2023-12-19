@@ -1,0 +1,4 @@
+tests:
+  dfu.image_util:
+    platform_whitelist: nrf52840_pca10056 native_posix
+    tags: dfu_image_util

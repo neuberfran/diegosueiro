@@ -1,0 +1,25 @@
+---
+title: Kinetis LPUART
+version: 0.1
+
+description: >
+    This binding gives a base representation of the Kinetis LPUART
+
+inherits:
+    !include uart.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,kinetis-lpuart"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+
+    pinctrl-*:
+      type: array
+      category: optional
+      description: pinmux information for RX, TX, CTS, RTS
+...

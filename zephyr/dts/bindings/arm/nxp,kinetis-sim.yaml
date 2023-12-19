@@ -1,0 +1,42 @@
+#
+# Copyright (c) 2017, NXP
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: Kinetis System Integration Module (SIM)
+version: 0.1
+
+description: >
+    This is a representation of the Kinetis SIM IP node
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "nxp,kinetis-sim"
+
+    reg:
+      category: required
+
+    label:
+      category: required
+
+    clkout-source:
+      type: int
+      category: optional
+      description: clkout clock source
+      generation: define
+
+    clkout-divider:
+      type: int
+      category: optional
+      description: clkout divider
+      generation: define
+
+"#cells":
+  - name
+  - offset
+  - bits
+...

@@ -1,0 +1,20 @@
+---
+title: Atmel SAM0 USB device
+version: 0.1
+
+description: >
+    Atmel SAM0 USB in device mode
+
+inherits:
+    !include usb-ep.yaml
+
+properties:
+    compatible:
+      constraint: "atmel,sam0-usb"
+
+    reg:
+      category: required
+
+    interrupts:
+      category: required
+...

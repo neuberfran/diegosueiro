@@ -1,0 +1,28 @@
+#
+# Copyright (c) 2018, Linaro Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+---
+title: GPIO KEYS
+version: 0.1
+
+description: >
+    This is a representation of the GPIO KEYS nodes
+
+inherits:
+    !include base.yaml
+
+properties:
+    compatible:
+      constraint: "gpio-keys"
+
+    gpios:
+      type: compound
+      category: required
+      generation: define
+
+    label:
+      category: required
+
+...
